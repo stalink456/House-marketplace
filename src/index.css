@@ -633,7 +633,7 @@ button {
 .profileDetailsHeader {
   display: flex;
   justify-content: space-between;
-  max-width: 500px;
+  margin-right: 5px;
 }
 
 .personalDetailsText {
@@ -651,7 +651,7 @@ button {
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.2);
-  max-width: 500px;
+  margin-right: 5px;
 }
 
 .profileDetails {
