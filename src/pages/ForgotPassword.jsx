@@ -23,7 +23,7 @@ function ForgotPassword() {
   return (
     <div className="pageContainer">
       <header>
-        <p className="pageHeader">Forgot Password</p>
+        <p className="pageHeader">Восстановление пароля</p>
       </header>
 
       <main>
@@ -31,16 +31,16 @@ function ForgotPassword() {
           <input
             type="email"
             className="emailInput"
-            placeholder="Email"
+            placeholder="Почта"
             id="email"
             value={email}
             onChange={onChange}
           />
           <Link className="forgotPasswordLink" to="/sign-in">
-            Sign In
+            Авторизоваться
           </Link>
           <div className="signInBar">
-            <div className="signInText">Send Reset Link</div>
+            <div className="signInText">Восстановить пароль</div>
             <button className="signInButton">
               <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
             </button>

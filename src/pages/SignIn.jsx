@@ -38,7 +38,7 @@ function SignIn() {
         navigate("/");
       }
     } catch (error) {
-      toast.error("Bad User Credentinals");
+      toast.error("Неверные учетные данные пользователя");
     }
   };
 
@@ -46,13 +46,13 @@ function SignIn() {
     <>
       <div className="pageContainer">
         <header>
-          <p className="pageHeader">Welcome Back!</p>
+          <p className="pageHeader">Добро пожаловать!</p>
         </header>
         <form onSubmit={onSubmit}>
           <input
             type="email"
             className="emailInput"
-            placeholder="Email"
+            placeholder="Почта"
             id="email"
             value={email}
             onChange={onChange}
@@ -61,7 +61,7 @@ function SignIn() {
             <input
               type={showPassword ? "text" : "password"}
               className="passwordInput"
-              placeholder="Password"
+              placeholder="Пароль"
               id="password"
               value={password}
               onChange={onChange}
@@ -74,10 +74,10 @@ function SignIn() {
             />
           </div>
           <Link to="/forgot-password" className="forgotPasswordLink">
-            Forgot Password
+            Забыли пароль?
           </Link>
           <div className="signInBar">
-            <p className="signInText">Sign In</p>
+            <p className="signInText">Вход</p>
             <button className="signInButton">
               <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
             </button>
@@ -87,7 +87,7 @@ function SignIn() {
         <OAuth></OAuth>
 
         <Link to="/sign-up" className="registerLink">
-          Sign Up Instead
+           Нет аккаунта?
         </Link>
       </div>
     </>

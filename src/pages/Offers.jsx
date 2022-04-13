@@ -49,7 +49,7 @@ function Offers() {
         setListings(listings);
         setLoading(false);
       } catch (error) {
-        toast.error("Could not fetch listings");
+        toast.error("Не удалось получить список");
       }
     };
 
@@ -59,7 +59,7 @@ function Offers() {
   return (
     <div className="category">
       <header>
-        <p className="pageHeader">Offers</p>
+        <p className="pageHeader">Предложения</p>
       </header>
       {loading ? (
         <Spinner />
@@ -78,7 +78,7 @@ function Offers() {
           </main>
         </>
       ) : (
-        <p>There are no current offers</p>
+        <p>Нет доступных предложений</p>
       )}
     </div>
   );

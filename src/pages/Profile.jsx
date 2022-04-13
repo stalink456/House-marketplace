@@ -40,7 +40,7 @@ function Profile() {
         });
       }
     } catch (error) {
-      toast.error("Could not update profile details");
+      toast.error("Не удалось обновить данные профиля");
     }
   };
 
@@ -54,14 +54,14 @@ function Profile() {
   return (
     <div className="profile">
       <header className="profileHeader">
-        <p className="pageHeader">My Profile</p>
+        <p className="pageHeader">Мой профиль</p>
         <button type="button" onClick={onLogout} className="logOut">
-          Logout
+          Выйти
         </button>
       </header>
       <main>
         <div className="profileDetailsHeader">
-          <p className="profileDetailsText">Personal Details</p>
+          <p className="profileDetailsText">Персональные данные</p>
           <p
             className="changePersonalDetails"
             onClick={() => {
@@ -69,7 +69,7 @@ function Profile() {
               setChangeDetails((prevState) => !prevState);
             }}
           >
-            {changeDetails ? "done" : "change"}
+            {changeDetails ? "Готово" : "Изменить"}
           </p>
         </div>
         <div className="profileCard">
@@ -94,7 +94,7 @@ function Profile() {
         </div>
         <Link to="/create-listing" className="createListing">
           <img src={homeIcon} alt="home" />
-          <p>Sell or rent your home</p>
+          <p>Разместить объявление</p>
           <img src={arrowRight} alt="arrow right" />
         </Link>
       </main>

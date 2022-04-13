@@ -73,13 +73,13 @@ function CreateListing() {
 
     if (discountedPrice >= regularPrice) {
       setLoading(false);
-      toast.error("Discounted price needs to be less than regular price");
+      toast.error("Цена со скидкой должна быть меньше обычной цены");
       return;
     }
 
     if (images.length > 6) {
       setLoading(false);
-      toast.error("Max 6 images");
+      toast.error("Можно загрузить только 6 фотографий");
       return;
     }
 
@@ -109,12 +109,11 @@ function CreateListing() {
           : undefined;
       if (location === undefined || location.includes("undefined")) {
         setLoading(false);
-        toast.error("Pleace enter a correct address");
+        toast.error("Пожалуйста, введите корректный адрес");
       }
     } else {
       geolocation.lat = latitude;
       geolocation.lng = longitude;
-
     }
 
     // Store image in firebase
@@ -130,15 +129,10 @@ function CreateListing() {
         uploadTask.on(
           "state_changed",
           (snapshot) => {
-            const progress =
-              (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-            console.log("Upload is " + progress + "% done");
             switch (snapshot.state) {
               case "paused":
-                console.log("Upload is paused");
                 break;
               case "running":
-                console.log("Upload is running");
                 break;
               default:
                 break;
@@ -160,7 +154,7 @@ function CreateListing() {
       [...images].map((image) => storeImage(image))
     ).catch(() => {
       setLoading(false);
-      toast.error("Images not uploaded");
+      toast.error("Фотография не загружена");
       return;
     });
 
@@ -429,7 +423,7 @@ function CreateListing() {
 
           <label className="formLabel">Фотографии</label>
           <p className="imagesInfo">
-          Первым изображением будет обложка (максимально 6).
+            Первым изображением будет обложка (максимально 6).
           </p>
           <input
             className="formInputFile"

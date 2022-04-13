@@ -61,8 +61,8 @@ function Categoty() {
       <header>
         <p className="pageHeader">
           {params.categoryName === "rent"
-            ? "Places for rent"
-            : "Palces for sale"}
+            ? "Места для аренды"
+            : "Места для продажи"}
         </p>
       </header>
       {loading ? (

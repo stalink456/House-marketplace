@@ -58,7 +58,7 @@ function SignUp() {
 
       navigate("/");
     } catch (error) {
-      toast.error("Something went wrong with registration");
+      toast.error("Что-то пошло не так)");
     }
   };
 
@@ -66,13 +66,13 @@ function SignUp() {
     <>
       <div className="pageContainer">
         <header>
-          <p className="pageHeader">Welcome Back!</p>
+          <p className="pageHeader">Добро пожаловать!</p>
         </header>
         <form onSubmit={onSubmit}>
           <input
             type="text"
             className="nameInput"
-            placeholder="Name"
+            placeholder="Имя"
             id="name"
             value={name}
             onChange={onChange}
@@ -80,7 +80,7 @@ function SignUp() {
           <input
             type="email"
             className="emailInput"
-            placeholder="Email"
+            placeholder="Почта"
             id="email"
             value={email}
             onChange={onChange}
@@ -89,7 +89,7 @@ function SignUp() {
             <input
               type={showPassword ? "text" : "password"}
               className="passwordInput"
-              placeholder="Password"
+              placeholder="Пароль"
               id="password"
               value={password}
               onChange={onChange}
@@ -102,10 +102,10 @@ function SignUp() {
             />
           </div>
           <Link to="/forgot-password" className="forgotPasswordLink">
-            Forgot Password
+            Забыли пароль?
           </Link>
           <div className="signUpBar">
-            <p className="signUpText">Sign Up</p>
+            <p className="signUpText">Зарегистрироваться</p>
             <button className="signUpButton">
               <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
             </button>
@@ -115,7 +115,7 @@ function SignUp() {
         <OAuth></OAuth>
 
         <Link to="/sign-in" className="registerLink">
-          Sign In Instead
+          Уже есть аккаунт?
         </Link>
       </div>
     </>

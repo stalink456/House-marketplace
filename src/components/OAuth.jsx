@@ -29,13 +29,13 @@ function OAuth() {
       }
       navigate("/");
     } catch (error) {
-      toast.error("Could not authorize with Google");
+      toast.error("Возникла ошибка при авторизации через Google аккаунт");
     }
   };
 
   return (
     <div className="socialLogin">
-      <p>Sign {location.pathname === "/sign-up" ? "up" : "in"} with </p>
+      <p>{location.pathname === "/sign-up" ? "Авторизация" : "Регистрация"} через </p>
       <button className="socialIconDiv" onClick={onGoogleClick}>
         <img className="socialIconImg" src={googleIcon} alt="google" />
       </button>
